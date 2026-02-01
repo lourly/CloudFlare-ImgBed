@@ -175,7 +175,7 @@ async function handleUpdateTags(context, db, fileId, hostname) {
         });
 
         // Clear CDN cache asynchronously (don't wait for it to complete)
-        const cdnUrl = `https://${hostname}/file/${fileId}`;
+        const cdnUrl = `https://${hostname}/${fileId}`;
         waitUntil(purgeCFCache(context.env, cdnUrl));
 
         // Update file index asynchronously
