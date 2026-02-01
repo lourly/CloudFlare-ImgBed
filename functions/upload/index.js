@@ -195,9 +195,9 @@ async function processFileUpload(context, formdata = null) {
     const returnFormat = url.searchParams.get('returnFormat') || 'default';
     let returnLink = '';
     if (returnFormat === 'full') {
-        returnLink = `${url.origin}/file/${fullId}`;
+        returnLink = `${url.origin}/${fullId}`;
     } else {
-        returnLink = `/file/${fullId}`;
+        returnLink = `/${fullId}`;
     }
 
     /* ====================================不同渠道上传======================================= */
